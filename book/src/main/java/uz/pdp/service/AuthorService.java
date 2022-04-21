@@ -9,6 +9,7 @@ import uz.pdp.repository.AuthorRepository;
 
 @Service
 public class AuthorService {
+
     @Autowired
     AuthorRepository authorRepository;
 

@@ -9,6 +9,7 @@ import uz.pdp.repository.UserRepository;
 
 @Service
 public class UserService {
+
     @Autowired
     UserRepository userRepository;
 
@@ -16,7 +17,7 @@ public class UserService {
         return ResponseEntity.ok(userRepository.findAll());
     }
 
-    public HttpEntity getUsersById(int id) {
+    public HttpEntity getUserById(int id) {
         return ResponseEntity.ok(userRepository.findById(id));
     }
 

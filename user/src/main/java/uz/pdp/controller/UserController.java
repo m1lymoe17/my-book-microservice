@@ -2,9 +2,8 @@ package uz.pdp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import uz.pdp.entity.User;
 import uz.pdp.service.UserService;
 
 @RestController
@@ -17,5 +16,21 @@ public class UserController {
     @GetMapping
     public HttpEntity getAllUsers(){
         return userService.getAllUsers();
+    }
+
+
+    @GetMapping("/{id}")
+    public HttpEntity getBookById(@PathVariable int id){
+        return userService.getUserById(id);
+    }
+
+    @PostMapping
+    public HttpEntity save(@RequestBody User user){
+        return userService.save(user);
+    }
+
+    @DeleteMapping("/{id}")
+    public HttpEntity deleteById(@PathVariable int id){
+        return userService.delete(id);
     }
 }
