@@ -6,9 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="my-book-microservice" />
-        <module name="client" />
+        <module name="clients" />
+        <module name="user" />
+        <module name="author" />
+        <module name="book" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="role" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
