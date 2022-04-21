@@ -1,17 +1,15 @@
-package uz.pdp;
+package uz.pdp.gatewayserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableEurekaClient
 @SpringBootApplication
-@EnableFeignClients(basePackages = "uz.pdp.clients")
-public class UserApplication {
+@EnableEurekaClient
+public class GatewayServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UserApplication.class, args);
+        SpringApplication.run(GatewayServerApplication.class, args);
     }
 
 }

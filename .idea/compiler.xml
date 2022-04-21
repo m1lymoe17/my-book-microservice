@@ -9,6 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="clients" />
         <module name="user" />
+        <module name="eureka-server" />
+        <module name="gateway" />
         <module name="book" />
       </profile>
     </annotationProcessing>
