@@ -14,23 +14,23 @@ public class UserController {
     UserService userService;
 
     @GetMapping
-    public HttpEntity getAllUsers(){
+    public HttpEntity<?> getAllUsers() {
         return userService.getAllUsers();
     }
 
 
     @GetMapping("/{id}")
-    public HttpEntity getBookById(@PathVariable int id){
+    public HttpEntity<?> getBookById(@PathVariable int id) {
         return userService.getUserById(id);
     }
 
     @PostMapping
-    public HttpEntity save(@RequestBody User user){
+    public HttpEntity<?> save(@RequestBody User user) {
         return userService.save(user);
     }
 
     @DeleteMapping("/{id}")
-    public HttpEntity deleteById(@PathVariable int id){
+    public HttpEntity<?> deleteById(@PathVariable int id) {
         return userService.delete(id);
     }
 }

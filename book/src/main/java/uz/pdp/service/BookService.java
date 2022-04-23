@@ -5,6 +5,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import uz.pdp.clients.book.BookDto;
+import uz.pdp.dto.BookStarDto;
 import uz.pdp.entity.Author;
 import uz.pdp.entity.Book;
 import uz.pdp.repository.AuthorRepository;
@@ -21,15 +22,15 @@ public class BookService {
     @Autowired
     AuthorRepository authorRepository;
 
-    public HttpEntity getAllBooks() {
+    public HttpEntity<?> getAllBooks() {
         return ResponseEntity.ok(bookRepository.findAll());
     }
 
-    public HttpEntity getBooksById(int id) {
+    public HttpEntity<?> getBooksById(int id) {
         return ResponseEntity.ok(bookRepository.findById(id));
     }
 
-    public HttpEntity save(BookDto book) {
+    public HttpEntity<?> save(BookDto book) {
         try {
             List<Author> authorList = new ArrayList<>();
 
@@ -53,7 +54,7 @@ public class BookService {
         }
     }
 
-    public HttpEntity delete(int id) {
+    public HttpEntity<?> delete(int id) {
         try {
             bookRepository.deleteById(id);
             return ResponseEntity.ok("Successfully deleted");

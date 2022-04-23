@@ -14,22 +14,22 @@ public class AuthorController {
     AuthorService authorService;
 
     @GetMapping
-    public HttpEntity getAllAuthors(){
+    public HttpEntity<?> getAllAuthors() {
         return authorService.getAllAuthors();
     }
 
     @GetMapping("/{id}")
-    public HttpEntity getAuthorById(@PathVariable int id){
+    public HttpEntity<?> getAuthorById(@PathVariable int id) {
         return authorService.getAuthorsById(id);
     }
 
     @PostMapping
-    public HttpEntity save(@RequestBody Author author){
+    public HttpEntity<?> save(@RequestBody Author author) {
         return authorService.save(author);
     }
 
     @DeleteMapping("/{id}")
-    public HttpEntity deleteById(@PathVariable int id){
+    public HttpEntity<?> deleteById(@PathVariable int id) {
         return authorService.delete(id);
     }
 }

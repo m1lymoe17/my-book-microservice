@@ -10,7 +10,7 @@ spring:
         - id: book
           uri: lb://book
           predicates:
-            - Path=/api/book/**, /api/author/**
+            - Path=/api/book/**, /api/author/**. /api/book_star/**
         - id: user
           uri: lb://user
           predicates:

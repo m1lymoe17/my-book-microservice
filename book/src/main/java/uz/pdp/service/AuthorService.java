@@ -13,19 +13,19 @@ public class AuthorService {
     @Autowired
     AuthorRepository authorRepository;
 
-    public HttpEntity getAllAuthors() {
+    public HttpEntity<?> getAllAuthors() {
         return ResponseEntity.ok(authorRepository.findAll());
     }
 
-    public HttpEntity getAuthorsById(int id) {
+    public HttpEntity<?> getAuthorsById(int id) {
         return ResponseEntity.ok(authorRepository.findById(id));
     }
 
-    public HttpEntity save(Author author) {
+    public HttpEntity<?> save(Author author) {
         return ResponseEntity.ok(authorRepository.save(author));
     }
 
-    public HttpEntity delete(int id) {
+    public HttpEntity<?> delete(int id) {
         try {
             authorRepository.deleteById(id);
             return ResponseEntity.ok("Successfully deleted");
