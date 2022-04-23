@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import uz.pdp.clients.book.BookClient;
-import uz.pdp.clients.user.UserClient;
-import uz.pdp.entity.User;
 import uz.pdp.repository.UserRepository;
 
 @Component

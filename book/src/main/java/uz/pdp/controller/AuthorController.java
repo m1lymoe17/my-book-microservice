@@ -24,8 +24,8 @@ public class AuthorController {
     }
 
     @PostMapping
-    public HttpEntity save(@RequestBody Author book){
-        return authorService.save(book);
+    public HttpEntity save(@RequestBody Author author){
+        return authorService.save(author);
     }
 
     @DeleteMapping("/{id}")
