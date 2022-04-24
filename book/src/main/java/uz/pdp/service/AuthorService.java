@@ -18,7 +18,7 @@ public class AuthorService {
     }
 
     public HttpEntity<?> getAuthorsById(int id) {
-        return ResponseEntity.ok(authorRepository.findById(id));
+        return ResponseEntity.ok(authorRepository.findById(id).get());
     }
 
     public HttpEntity<?> save(Author author) {

@@ -27,7 +27,7 @@ public class BookService {
     }
 
     public HttpEntity<?> getBooksById(int id) {
-        return ResponseEntity.ok(bookRepository.findById(id));
+        return ResponseEntity.ok(bookRepository.findById(id).get());
     }
 
     public HttpEntity<?> save(BookDto book) {

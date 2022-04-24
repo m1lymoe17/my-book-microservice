@@ -15,3 +15,7 @@ spring:
           uri: lb://user
           predicates:
             - Path=/api/user/**
+        - id: user_favourites
+          uri: lb://user
+          predicates:
+            - Path=/api/user_favourite/**

@@ -18,7 +18,7 @@ public class UserService {
     }
 
     public HttpEntity<?> getUserById(int id) {
-        return ResponseEntity.ok(userRepository.findById(id));
+        return ResponseEntity.ok(userRepository.findById(id).get());
     }
 
     public HttpEntity<?> save(User user) {
