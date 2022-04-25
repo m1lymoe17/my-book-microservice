@@ -1,4 +1,4 @@
-package uz.pdp.clients.book;
+package uz.pdp.clients.bookAndAuthor;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BookDto {
+public class Book {
     private Integer id;
     private String title;
     private String description;

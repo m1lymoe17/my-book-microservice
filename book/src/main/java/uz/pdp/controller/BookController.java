@@ -3,7 +3,7 @@ package uz.pdp.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.*;
-import uz.pdp.clients.book.BookDto;
+import uz.pdp.clients.bookAndAuthor.Book;
 import uz.pdp.dto.BookStarDto;
 import uz.pdp.service.BookService;
 import uz.pdp.service.BookStarService;
@@ -14,6 +14,9 @@ public class BookController {
 
     @Autowired
     BookService bookService;
+
+    @Autowired
+    BookStarService bookStarService;
 
     @GetMapping
     public HttpEntity<?> getAllBooks() {
@@ -26,12 +29,17 @@ public class BookController {
     }
 
     @PostMapping
-    public HttpEntity<?> save(@RequestBody BookDto book) {
+    public HttpEntity<?> save(@RequestBody Book book) {
         return bookService.save(book);
     }
 
     @DeleteMapping("/{id}")
-    public HttpEntity<?> deleteById(@PathVariable int id) {
+    public HttpEntity<?> deleteBookById(@PathVariable int id) {
         return bookService.delete(id);
+    }
+
+    @PostMapping("/addStar")
+    public HttpEntity<?> addStarsToBook(@RequestBody BookStarDto bookStarDto) {
+        return bookStarService.addStartsToBook(bookStarDto);
     }
 }

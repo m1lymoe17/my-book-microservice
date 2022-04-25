@@ -10,12 +10,19 @@ spring:
         - id: book
           uri: lb://book
           predicates:
-            - Path=/api/book/**, /api/author/**. /api/book_star/**
+            - Path=/api/book/**, /api/author/**, /api/book_star/**
+        - id: user-favourite
+          uri: lb://user-favourite
+          predicates:
+            - Path=/api/user-favourite/**
         - id: user
           uri: lb://user
           predicates:
             - Path=/api/user/**
-        - id: user_favourites
-          uri: lb://user
-          predicates:
-            - Path=/api/user_favourite/**
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

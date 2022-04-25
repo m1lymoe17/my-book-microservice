@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import uz.pdp.clients.book.BookClient;
-import uz.pdp.clients.user.UserClient;
 import uz.pdp.userfavourite.dto.UserFavouriteDto;
 import uz.pdp.userfavourite.entity.UserFavourite;
 import uz.pdp.userfavourite.repository.UserFavouritesRepository;
@@ -14,12 +12,6 @@ import java.util.List;
 
 @Service
 public class UserFavouriteService {
-
-    @Autowired
-    UserClient userClient;
-
-    @Autowired
-    BookClient bookClient;
 
     @Autowired
     UserFavouritesRepository userFavouritesRepository;

@@ -29,7 +29,7 @@ public class AuthorController {
     }
 
     @DeleteMapping("/{id}")
-    public HttpEntity<?> deleteById(@PathVariable int id) {
+    public HttpEntity<?> deleteAuthorById(@PathVariable int id) {
         return authorService.delete(id);
     }
 }

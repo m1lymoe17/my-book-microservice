@@ -1,4 +1,4 @@
-package uz.pdp.clients.author;
+package uz.pdp.clients.bookAndAuthor;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

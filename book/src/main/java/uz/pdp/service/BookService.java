@@ -4,10 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import uz.pdp.clients.book.BookDto;
-import uz.pdp.dto.BookStarDto;
+import uz.pdp.clients.bookAndAuthor.Book;
 import uz.pdp.entity.Author;
-import uz.pdp.entity.Book;
 import uz.pdp.repository.AuthorRepository;
 import uz.pdp.repository.BookRepository;
 
@@ -30,7 +28,7 @@ public class BookService {
         return ResponseEntity.ok(bookRepository.findById(id).get());
     }
 
-    public HttpEntity<?> save(BookDto book) {
+    public HttpEntity<?> save(Book book) {
         try {
             List<Author> authorList = new ArrayList<>();
 
@@ -40,13 +38,13 @@ public class BookService {
             }
 
             if (book.getId() != null) {
-                Book book1 = bookRepository.getById(book.getId());
+                uz.pdp.entity.Book book1 = bookRepository.getById(book.getId());
                 book1.setTitle(book.getTitle());
                 book1.setDescription(book.getDescription());
                 book1.setAuthorList(authorList);
                 bookRepository.save(book1);
             } else {
-                bookRepository.save(new Book(book.getTitle(), book.getDescription(), authorList));
+                bookRepository.save(new uz.pdp.entity.Book(book.getTitle(), book.getDescription(), authorList));
             }
             return ResponseEntity.ok("Success");
         } catch (Exception e) {

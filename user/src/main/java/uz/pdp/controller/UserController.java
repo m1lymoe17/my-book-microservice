@@ -18,9 +18,8 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-
     @GetMapping("/{id}")
-    public HttpEntity<?> getBookById(@PathVariable int id) {
+    public HttpEntity<?> getUserById(@PathVariable int id) {
         return userService.getUserById(id);
     }
 
