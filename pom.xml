@@ -16,6 +16,8 @@
         <module>gateway</module>
         <module>clients</module>
         <module>user-favourite</module>
+        <module>book-review</module>
+        <module>email-sender</module>
     </modules>
 
 

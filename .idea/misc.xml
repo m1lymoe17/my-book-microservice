@@ -9,13 +9,19 @@
         <option value="$PROJECT_DIR$/client/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/user_favourite/pom.xml" />
-        <option value="$PROJECT_DIR$/user-favourite/pom.xml" />
+        <option value="$PROJECT_DIR$/book_review/pom.xml" />
         <option value="$PROJECT_DIR$/consumer_service/pom.xml" />
+        <option value="$PROJECT_DIR$/book-review/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-service/pom.xml" />
+        <option value="$PROJECT_DIR$/emai-sender/pom.xml" />
+        <option value="$PROJECT_DIR$/email-sender/pom.xml" />
+        <option value="$PROJECT_DIR$/user-favourite/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/author/pom.xml" />
+        <option value="$PROJECT_DIR$/frefgrefge/pom.xml" />
         <option value="$PROJECT_DIR$/role/pom.xml" />
       </set>
     </option>
