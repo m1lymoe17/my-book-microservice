@@ -13,5 +13,6 @@ public class Book {
     private Integer id;
     private String title;
     private String description;
+    private Integer currentUserId;
     private List<Integer> authorId;
 }

@@ -18,8 +18,4 @@ public class User extends AbsEntity {
     private String lastName;
     private String username;
     private String password;
-
-    @ManyToOne
-    @JoinColumn(name = "book_id")
-    private Book book;
 }

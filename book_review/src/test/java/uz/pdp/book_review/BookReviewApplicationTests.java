@@ -1,13 +1,13 @@
-package uz.pdp.producer_service;
+package uz.pdp.book_review;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProducerServiceApplicationTests {
+class BookReviewApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

@@ -19,15 +19,13 @@ public class DataLoader implements CommandLineRunner {
                 new User("Umidjon",
                         "Muydinov",
                         "m1lmyoe",
-                        "12345",
-                        null));
+                        "12345"));
 
         User hoji = userRepository.save(
                 new User(
                         "Hojiakbar",
                         "Muydinov",
                         "hoji17",
-                        "12345",
-                        null));
+                        "12345"));
     }
 }

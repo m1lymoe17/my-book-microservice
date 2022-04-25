@@ -9,19 +9,15 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <artifactId>producer_service</artifactId>
+    <artifactId>consumer_service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>producer_service</name>
-    <description>producer_service</description>
+    <name>consumer_service</name>
+    <description>consumer_service</description>
     <properties>
         <java.version>11</java.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
@@ -30,7 +26,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -42,5 +37,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 </project>

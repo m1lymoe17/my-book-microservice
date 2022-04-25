@@ -1,7 +1,7 @@
-package uz.pdp.producer_service.config;
+package uz.pdp.consumer_service.config;
 
+import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,6 +20,15 @@ public class RabbitMQConfig {
     @Value("${spring.rabbitmq.password}")
     String password;
 
+    @Value("${spring.rabbitmq.queue}")
+    String queue;
+
+    @Value("${spring.rabbitmq.exchange}")
+    String exchange;
+
+    @Value("${spring.rabbitmq.routing-key}")
+    String routingKey;
+
     @Bean
     public CachingConnectionFactory factory() {
         CachingConnectionFactory cachingConnectionFactory = new CachingConnectionFactory();
@@ -35,10 +44,17 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public RabbitTemplate rabbitTemplate() {
-        RabbitTemplate rabbitTemplate = new RabbitTemplate(factory());
-        rabbitTemplate.setMessageConverter(messageConverter());
-        return rabbitTemplate;
+    public Queue queue(){
+        return new Queue(queue,true);
     }
 
+    @Bean
+    public Exchange getExchange(){
+        return ExchangeBuilder.directExchange(exchange).build();
+    }
+
+    @Bean
+    public Binding binding(){
+        return BindingBuilder.bind(queue()).to(getExchange()).with(routingKey).noargs();
+    }
 }

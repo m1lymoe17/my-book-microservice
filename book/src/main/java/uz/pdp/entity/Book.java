@@ -10,7 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import java.sql.Timestamp;
 import java.util.List;
 
 @Data
@@ -20,6 +19,7 @@ import java.util.List;
 public class Book extends AbsEntity {
     private String title;
     private String description;
+    private Integer currentUserId;
     @ManyToMany
     @JoinTable(
             name = "books_authors",

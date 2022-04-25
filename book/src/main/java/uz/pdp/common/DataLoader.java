@@ -30,7 +30,7 @@ public class DataLoader implements CommandLineRunner {
         authorList.add(alisher_navoiy);
         authorList.add(mirzo_ulugbek);
 
-        bookRepository.save(new Book("Dream nigga", "no description", authorList));
-        bookRepository.save(new Book("Dream nigga 2", "no description", Collections.singletonList(alisher_navoiy)));
+        bookRepository.save(new Book("Dream nigga", "no description", 1, authorList));
+        bookRepository.save(new Book("Dream nigga 2", "no description", 2, Collections.singletonList(alisher_navoiy)));
     }
 }
