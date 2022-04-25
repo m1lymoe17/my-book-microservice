@@ -12,11 +12,11 @@ public interface UserClient {
     List<User> getAllUsers();
 
     @GetMapping("/{id}")
-    User getUserById(@PathVariable int id);
+    User getUserById(@PathVariable("id") int id);
 
     @PostMapping
     User save(@RequestBody User user);
 
     @DeleteMapping("/{id}")
-    String deleteById(@PathVariable int id);
+    String deleteById(@PathVariable("id") int id);
 }

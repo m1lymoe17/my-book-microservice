@@ -6,9 +6,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import uz.pdp.book_review.dto.Something;
-import uz.pdp.book_review.repository.BookReviewRepository;
 import uz.pdp.book_review.entity.BookReview;
+import uz.pdp.book_review.repository.BookReviewRepository;
 
 @Service
 public class BookReviewService {
@@ -45,10 +44,5 @@ public class BookReviewService {
         } catch (Exception e) {
             return ResponseEntity.ok("Could not delete");
         }
-    }
-
-    public String save2(Something something) {
-        rabbitTemplate.convertAndSend(exchange, routingKey, something);
-        return "saved";
     }
 }

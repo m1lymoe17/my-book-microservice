@@ -3,7 +3,7 @@ package uz.pdp.book_review.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.*;
-import uz.pdp.book_review.dto.Something;
+import uz.pdp.book_review.entity.BookReview;
 import uz.pdp.book_review.service.BookReviewService;
 
 @RestController
@@ -23,14 +23,9 @@ public class BookReviewController {
         return bookReviewService.getBookReviewById(id);
     }
 
-//    @PostMapping
-//    public HttpEntity<?> save(@RequestBody BookReview bookReview) {
-//        return bookReviewService.save(bookReview);
-//    }
-
-    @PostMapping()
-    public String save2(@RequestBody Something something) {
-        return bookReviewService.save2(something);
+    @PostMapping
+    public HttpEntity<?> save(@RequestBody BookReview bookReview) {
+        return bookReviewService.save(bookReview);
     }
 
     @DeleteMapping("/{id}")
