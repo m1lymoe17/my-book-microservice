@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/user_favourite/pom.xml" />
         <option value="$PROJECT_DIR$/user-favourite/pom.xml" />
+        <option value="$PROJECT_DIR$/producer_service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

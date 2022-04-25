@@ -16,6 +16,7 @@
         <module>gateway</module>
         <module>clients</module>
         <module>user-favourite</module>
+        <module>producer_service</module>
     </modules>
 
 

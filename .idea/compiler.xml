@@ -9,10 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="user-favourite" />
         <module name="clients" />
+        <module name="book" />
         <module name="user" />
         <module name="eureka-server" />
         <module name="gateway" />
-        <module name="book" />
+        <module name="producer_service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="producer_service" options="" />
       <module name="user-favourite" options="" />
     </option>
   </component>
