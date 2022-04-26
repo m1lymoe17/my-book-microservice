@@ -22,7 +22,6 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
         Author alisher_navoiy = authorRepository.save(new Author("Alisher", "Navoiy"));
         Author mirzo_ulugbek = authorRepository.save(new Author("Ulugbek", "Mirzo"));
 

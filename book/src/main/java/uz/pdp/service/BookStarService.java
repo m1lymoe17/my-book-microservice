@@ -31,11 +31,13 @@ public class BookStarService {
                 bookStar.setBook(book);
                 bookStar.setStars(bookStar.getStars());
                 bookStarRepository.save(bookStar);
+
             } else {
                 bookStarRepository.save(
                         new BookStar(book, bookStarDto.getUserId(),
                                 bookStarDto.getStars()));
             }
+
             return ResponseEntity.ok("success");
         } catch (Exception e) {
             return ResponseEntity.ok("fail");
