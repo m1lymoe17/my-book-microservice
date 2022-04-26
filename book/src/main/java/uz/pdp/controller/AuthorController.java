@@ -18,8 +18,8 @@ public class AuthorController {
         return authorService.getAllAuthors();
     }
 
-    @GetMapping("/{id}")
-    public HttpEntity<?> getAuthorById(@PathVariable int id) {
+    @GetMapping("/{authorId}")
+    public HttpEntity<?> getAuthorById(@PathVariable("authorId") int id) {
         return authorService.getAuthorsById(id);
     }
 

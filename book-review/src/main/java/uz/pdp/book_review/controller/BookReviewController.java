@@ -19,7 +19,7 @@ public class BookReviewController {
     }
 
     @GetMapping("/{id}")
-    public HttpEntity<?> getBookReviewById(@PathVariable int id) {
+    public HttpEntity<?> getBookReviewById(@PathVariable("id") int id) {
         return bookReviewService.getBookReviewById(id);
     }
 

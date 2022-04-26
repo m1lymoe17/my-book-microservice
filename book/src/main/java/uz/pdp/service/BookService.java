@@ -44,7 +44,7 @@ public class BookService {
                 book1.setAuthorList(authorList);
                 bookRepository.save(book1);
             } else {
-                bookRepository.save(new uz.pdp.entity.Book(book.getTitle(), book.getDescription(),book.getCurrentUserId(),
+                bookRepository.save(new uz.pdp.entity.Book(book.getTitle(), book.getDescription(), book.getCurrentUserId(),
                         authorList));
             }
             return ResponseEntity.ok("Success");

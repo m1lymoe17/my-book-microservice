@@ -33,4 +33,8 @@ public class UserService {
             return ResponseEntity.ok("Could not delete");
         }
     }
+
+    public String getUserEmailByUserId(Integer userId) {
+        return userRepository.getUserEmailByUserId(userId);
+    }
 }

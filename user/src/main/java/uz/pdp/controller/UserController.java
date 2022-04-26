@@ -19,7 +19,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public HttpEntity<?> getUserById(@PathVariable int id) {
+    public HttpEntity<?> getUserById(@PathVariable("id") int id) {
         return userService.getUserById(id);
     }
 
@@ -31,5 +31,10 @@ public class UserController {
     @DeleteMapping("/{id}")
     public HttpEntity<?> deleteById(@PathVariable int id) {
         return userService.delete(id);
+    }
+
+    @GetMapping("/getUserEmailByUserId/{userId}")
+    String getUserEmailByUserId(@PathVariable("userId") Integer userId){
+        return userService.getUserEmailByUserId(userId);
     }
 }

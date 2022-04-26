@@ -8,15 +8,15 @@ import java.util.List;
 @FeignClient(name = "book-review")
 public interface BookReviewClient {
 
-    @GetMapping
+    @GetMapping("/api/book-review")
     List<BookReview> getAllBookReviews();
 
-    @GetMapping("/{id}")
+    @GetMapping("/api/book-review/{id}")
     BookReview getBookReviewById(@PathVariable("id") int id);
 
-    @PostMapping
+    @PostMapping("/api/book-review")
     BookReview save(@RequestBody BookReview bookReview);
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/api/book-review/{id}")
     String deleteBookReviewById(@PathVariable("id") int id);
 }

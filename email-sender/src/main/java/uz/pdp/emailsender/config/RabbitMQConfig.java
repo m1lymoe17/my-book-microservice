@@ -39,22 +39,22 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public MessageConverter messageConverter(){
+    public MessageConverter messageConverter() {
         return new Jackson2JsonMessageConverter();
     }
 
     @Bean
-    public Queue queue(){
-        return new Queue(queue,true);
+    public Queue queue() {
+        return new Queue(queue, true);
     }
 
     @Bean
-    public Exchange getExchange(){
+    public Exchange getExchange() {
         return ExchangeBuilder.directExchange(exchange).build();
     }
 
     @Bean
-    public Binding binding(){
+    public Binding binding() {
         return BindingBuilder.bind(queue()).to(getExchange()).with(routingKey).noargs();
     }
 }

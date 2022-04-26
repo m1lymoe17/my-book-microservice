@@ -23,9 +23,9 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
-    @GetMapping("/{id}")
-    public HttpEntity<?> getBookById(@PathVariable int id) {
-        return bookService.getBooksById(id);
+    @GetMapping("/{bookId}")
+    public HttpEntity<?> getBookById (@PathVariable("bookId") int bookId){
+        return bookService.getBooksById(bookId);
     }
 
     @PostMapping
@@ -33,8 +33,8 @@ public class BookController {
         return bookService.save(book);
     }
 
-    @DeleteMapping("/{id}")
-    public HttpEntity<?> deleteBookById(@PathVariable int id) {
+    @DeleteMapping("/{bookId}")
+    public HttpEntity<?> deleteBookById(@PathVariable("bookId") int id) {
         return bookService.delete(id);
     }
 

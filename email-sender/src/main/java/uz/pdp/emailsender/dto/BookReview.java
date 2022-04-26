@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BookReview {
     private Integer userId;
-    private String bookId;
+    private Integer bookId;
     private String message;
 }

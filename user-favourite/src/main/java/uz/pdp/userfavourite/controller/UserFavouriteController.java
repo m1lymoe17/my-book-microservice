@@ -18,7 +18,7 @@ public class UserFavouriteController {
     UserFavouriteService userFavouriteService;
 
     @GetMapping("/{id}")
-    public HttpEntity<?> getAuthorById(@PathVariable int id) {
+    public HttpEntity<?> getAuthorById(@PathVariable("id") int id) {
         List<UserFavourite> userFavouritesByUserId = userFavouriteService.getUserFavouritesByUserId(id);
         return ResponseEntity.ok(userFavouritesByUserId);
     }

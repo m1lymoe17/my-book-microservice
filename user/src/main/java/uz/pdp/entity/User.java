@@ -16,6 +16,6 @@ import javax.persistence.ManyToOne;
 public class User extends AbsEntity {
     private String firstName;
     private String lastName;
-    private String username;
+    private String email;
     private String password;
 }
