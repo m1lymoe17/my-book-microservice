@@ -41,7 +41,7 @@ public class EmailSenderService {
 
             helper.setFrom(myEmail);
             helper.setTo(currentUserEmail);
-            helper.setText(bookReview.getMessage());
+            helper.setText("http://localhost:8086/api/book-review/allReviews/" + bookReview.getBookId());
             mailSender.send(message);
 
         } catch (MessagingException e) {

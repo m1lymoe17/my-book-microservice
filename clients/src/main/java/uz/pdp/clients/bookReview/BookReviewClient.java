@@ -8,8 +8,8 @@ import java.util.List;
 @FeignClient(name = "book-review")
 public interface BookReviewClient {
 
-    @GetMapping("/api/book-review")
-    List<BookReview> getAllBookReviews();
+    @GetMapping("/api/book-review/allReviews/{bookId}")
+    List<BookReview> getAllBookReviewsByBookId(@PathVariable("bookId") Integer bookId);
 
     @GetMapping("/api/book-review/{id}")
     BookReview getBookReviewById(@PathVariable("id") int id);

@@ -13,9 +13,9 @@ public class BookReviewController {
     @Autowired
     BookReviewService bookReviewService;
 
-    @GetMapping
-    public HttpEntity<?> getAllBookReviews() {
-        return bookReviewService.getAllBookReviews();
+    @GetMapping("/allReviews/{bookId}")
+    public HttpEntity<?> getAllBookReviewsByBookId(@PathVariable("bookId") Integer bookId) {
+        return bookReviewService.getAllBookReviews(bookId);
     }
 
     @GetMapping("/{id}")

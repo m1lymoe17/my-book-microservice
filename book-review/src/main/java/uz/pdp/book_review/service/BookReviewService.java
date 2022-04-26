@@ -24,8 +24,8 @@ public class BookReviewService {
     @Value("${spring.rabbitmq.routing-key}")
     String routingKey;
 
-    public HttpEntity<?> getAllBookReviews() {
-        return ResponseEntity.ok(bookReviewRepository.findAll());
+    public HttpEntity<?> getAllBookReviews(Integer bookId) {
+        return ResponseEntity.ok(bookReviewRepository.findAllByBookId(bookId));
     }
 
     public HttpEntity<?> getBookReviewById(int id) {
